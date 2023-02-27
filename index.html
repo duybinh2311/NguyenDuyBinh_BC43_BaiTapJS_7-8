@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript 7-8</title>
+
+    <!-- Bootstrap v5.3 -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0-alpha1/css/bootstrap.min.css"
+      integrity="sha512-72OVeAaPeV8n3BdZj7hOkaPSEk/uwpDkaGyP4W2jSzAC8tfiO4LMEDWoL3uFp5mcZu+8Eehb4GhZWFwvrss69Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+
+  <body>
+    <!-- Tạo mảng -->
+    <section class="cre-arr">
+      <div class="container my-5">
+        <div class="card">
+          <div class="card-header text-center">
+            <h3>Tạo Mảng Số</h3>
+          </div>
+          <div class="card-body">
+            <div class="input-group">
+              <div class="form-floating">
+                <input
+                  type="number"
+                  class="form-control"
+                  id="inputNum"
+                  placeholder="Nhập vào số nguyên"
+                />
+                <label for="inputNumber">Nhập vào số nguyên</label>
+              </div>
+              <button class="btn btn-success w-25" id="creArr">
+                Create Number
+              </button>
+              <button class="btn btn-danger w-25" id="resetArr">Reset</button>
+            </div>
+          </div>
+          <div class="card-footer">
+            <div class="alert bg-primary bg-gradient text-white my-0">
+              <span class="fst-italic fw-bold">ARRAY NUMBER :</span>
+              <span id="arrNum"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Layout Bài Tập -->
+    <section class="home-work">
+      <div class="container">
+        <div class="card">
+          <!-- Group Button -->
+          <div class="tab-group-header row gap-2 card-header mx-0">
+            <button
+              class="btn btn-primary col"
+              data-bs-toggle="collapse"
+              data-bs-target="#item-1"
+            >
+              Bài 1
+            </button>
+            <button
+              class="btn btn-primary col"
+              data-bs-toggle="collapse"
+              data-bs-target="#item-2"
+            >
+              Bài 2
+            </button>
+            <button
+              class="btn btn-primary col"
+              data-bs-toggle="collapse"
+              data-bs-target="#item-3"
+            >
+              Bài 3
+            </button>
+            <button
+              class="btn btn-primary col"
+              data-bs-toggle="collapse"
+              data-bs-target="#item-4"
+            >
+              Bài 4
+            </button>
+            <button
+              class="btn btn-primary col"
+              data-bs-toggle="collapse"
+              data-bs-target="#item-5"
+            >
+              Bài 5
+            </button>
+            <button
+              class="btn btn-primary col"
+              data-bs-toggle="collapse"
+              data-bs-target="#item-6"
+            >
+              Bài 6
+            </button>
+            <button
+              class="btn btn-primary col"
+              data-bs-toggle="collapse"
+              data-bs-target="#item-7"
+            >
+              Bài 7
+            </button>
+            <button
+              class="btn btn-primary col"
+              data-bs-toggle="collapse"
+              data-bs-target="#item-8"
+            >
+              Bài 8
+            </button>
+            <button
+              class="btn btn-primary col"
+              data-bs-toggle="collapse"
+              data-bs-target="#item-9"
+            >
+              Bài 9
+            </button>
+            <button
+              class="btn btn-primary col"
+              data-bs-toggle="collapse"
+              data-bs-target="#item-10"
+            >
+              Bài 10
+            </button>
+          </div>
+
+          <!-- Group Tab -->
+          <div class="tab-group-body card-body" id="tab-group-body">
+            <!-- Bài 1 -->
+            <div
+              id="item-1"
+              class="collapse row"
+              data-bs-parent="#tab-group-body"
+            >
+              <button class="btn btn-success mb-2">
+                Tính Tổng Giá Trị Các Số Dương Trong Mảng
+              </button>
+              <div class="alert bg-primary text-white my-0">
+                <span class="fst-italic fw-bold">Kết Quả : </span>
+                <span id="result-1"></span>
+              </div>
+            </div>
+
+            <!-- Bài 2 -->
+            <div
+              id="item-2"
+              class="collapse row"
+              data-bs-parent="#tab-group-body"
+            >
+              <button class="btn btn-success mb-2">
+                Đếm Số Dương Có Trong Mảng
+              </button>
+              <div class="alert bg-primary text-white my-0">
+                <span class="fst-italic fw-bold">Kết Quả : </span>
+                <span id="result-2"></span>
+              </div>
+            </div>
+
+            <!-- Bài 3 -->
+            <div
+              id="item-3"
+              class="collapse row"
+              data-bs-parent="#tab-group-body"
+            >
+              <button class="btn btn-success mb-2">
+                Tìm Số Nhỏ Nhất Trong Mảng
+              </button>
+              <div class="alert bg-primary text-white my-0">
+                <span class="fst-italic fw-bold">Kết Quả : </span>
+                <span id="result-3"></span>
+              </div>
+            </div>
+
+            <!-- Bài 4 -->
+            <div
+              id="item-4"
+              class="collapse row"
+              data-bs-parent="#tab-group-body"
+            >
+              <button class="btn btn-success mb-2">
+                Tìm Số Dương Nhỏ Nhất Trong Mảng
+              </button>
+              <div class="alert bg-primary text-white my-0">
+                <span class="fst-italic fw-bold">Kết Quả : </span>
+                <span id="result-4"></span>
+              </div>
+            </div>
+
+            <!-- Bài 5 -->
+            <div
+              id="item-5"
+              class="collapse row"
+              data-bs-parent="#tab-group-body"
+            >
+              <button class="btn btn-success mb-2">
+                Tìm Số Chẵn Cuối Cùng Trong Mảng
+                <span class="text-dark fw-bold"
+                  >(Nếu không có số chẵn thì trả về -1)</span
+                >
+              </button>
+              <div class="alert bg-primary text-white my-0">
+                <span class="fst-italic fw-bold">Kết Quả : </span>
+                <span id="result-5"></span>
+              </div>
+            </div>
+
+            <!-- Bài 6 -->
+            <div id="item-6" class="collapse" data-bs-parent="#tab-group-body">
+              <div class="row">
+                <div class="col-4">
+                  <div class="input-group">
+                    <span class="input-group-text"
+                      >Vị trí phần tử cần thay đổi</span
+                    >
+                    <input type="number" class="form-control" />
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="input-group">
+                    <span class="input-group-text">Vị trí cần đổi sang</span>
+                    <input type="number" class="form-control" />
+                  </div>
+                </div>
+                <div class="col-4">
+                  <button class="btn btn-success mb-3 w-100">
+                    Thay đổi vị trí phần tử
+                  </button>
+                </div>
+              </div>
+              <div class="alert bg-primary text-white my-0">
+                <span class="fst-italic fw-bold">Mảng Sau Khi Đổi : </span>
+                <span id="result-6"></span>
+              </div>
+            </div>
+
+            <!-- Bài 7 -->
+            <div
+              id="item-7"
+              class="collapse row"
+              data-bs-parent="#tab-group-body"
+            >
+              <button class="btn btn-success mb-2">
+                Sắp Xếp Mảng Theo Thứ Tự Tăng Dần
+              </button>
+              <div class="alert bg-primary text-white my-0">
+                <span class="fst-italic fw-bold">Mảng Sau Khi Sắp Xếp : </span>
+                <span id="result-7"></span>
+              </div>
+            </div>
+
+            <!-- Bài 8 -->
+            <div
+              id="item-8"
+              class="collapse row"
+              data-bs-parent="#tab-group-body"
+            >
+              <button class="btn btn-success mb-2">
+                Tìm Số Nguyên Tố Đầu Tiên
+                <span class="text-dark fw-bold"
+                  >(Nếu không có số nguyên tố thì trả về -1)</span
+                >
+              </button>
+              <div class="alert bg-primary text-white my-0">
+                <span class="fst-italic fw-bold">Kết Quả : </span>
+                <span id="result-8"></span>
+              </div>
+            </div>
+
+            <!-- Bài 9 -->
+            <div
+              id="item-9"
+              class="collapse row"
+              data-bs-parent="#tab-group-body"
+            >
+              <button class="btn btn-success mb-2">
+                Đếm Số Nguyên Có Trong Mảng
+              </button>
+              <div class="alert bg-primary text-white my-0">
+                <span class="fst-italic fw-bold">Kết Quả : </span>
+                <span id="result-9"></span>
+              </div>
+            </div>
+
+            <!-- Bài 10 -->
+            <div
+              id="item-10"
+              class="collapse row"
+              data-bs-parent="#tab-group-body"
+            >
+              <button class="btn btn-success mb-2">
+                So Sánh Số Lượng Số Dương Và Số Âm
+              </button>
+              <div class="alert bg-primary text-white my-0">
+                <span class="fst-italic fw-bold">Kết Quả : </span>
+                <span id="result-10"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bootstrap Js -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0-alpha1/js/bootstrap.min.js"
+      integrity="sha512-eHx4nbBTkIr2i0m9SANm/cczPESd0DUEcfl84JpIuutE6oDxPhXvskMR08Wmvmfx5wUpVjlWdi82G5YLvqqJdA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- Method Js -->
+    <script src="./method.js"></script>
+
+    <!-- Main Js -->
+    <script src="./index.js"></script>
+  </body>
+</html>

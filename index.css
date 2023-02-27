@@ -1,0 +1,13 @@
+/* Hide Arrows Input Number */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+/* Change color button when active */
+.tab-group-header button[aria-expanded='true'] {
+  background-color: #bb2d3b;
+  color: white;
+  border: #bb2d3b;
+  transition: all 0.3s;
+}
