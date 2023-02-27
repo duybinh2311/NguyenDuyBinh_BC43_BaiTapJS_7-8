@@ -153,7 +153,7 @@ function findPrimeNum(arrNumber) {
 function countIntegerNum(arrNumber) {
   let intergerCount = 0
   for (i = 0; i < arrNumber.length; i++) {
-    if (Number.isInteger(arrNumber[i])){
+    if (Number.isInteger(arrNumber[i])) {
       intergerCount += 1
     }
   }
