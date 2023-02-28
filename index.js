@@ -101,7 +101,7 @@ button[6].onclick = function () {
 button[7].onclick = function () {
   // input: array number
   // process: sử dụng hàm findPrimeNum để sắp xếp các phần tử trong mảng theo thứ tự tăng dần
-  let primeNumFirst = findPrimeNum(arrNumber)
+  let primeNumFirst = findPrimeNumFirst(arrNumber)
 
   // output: in số nguyên tố đầu tiên tìm thấy ra màn hình
   document.querySelector('#result-8').innerHTML = primeNumFirst

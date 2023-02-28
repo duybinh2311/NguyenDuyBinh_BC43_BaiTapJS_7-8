@@ -124,27 +124,30 @@ function sortAscending(arrNumber) {
 
 // Bài 8
 /**
- * It finds the first prime number in an array of numbers.
- * @param arrNumber - [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23,
- * 24, 25, 26, 27, 28, 29, 30, 31
+ * It loops through the array, and if it finds a prime number, it returns it. If it doesn't find a
+ * prime number, it returns -1.
+ * @param arrNumber - an array containing integers.
  * @returns The first prime number in the array.
  */
-function findPrimeNum(arrNumber) {
-  let primeNumFirst = -1
-  for (i = 0; i < arrNumber.length; i++) {
-    if (arrNumber[i] === 2) {
-      primeNumFirst = arrNumber[i]
-      break
-    } else if (arrNumber[i] % 2 === 0) continue
-    else {
-      primeNumFirst = arrNumber[i]
-      break
+function findPrimeNumFirst(arrNumber) {
+  function checkPrimeNum(n) {
+    if (n < 2) return false
+    for (let i = 2; i <= Math.sqrt(n); i++) {
+      if (n % i === 0) {
+        return false
+      }
+    }
+    return true
+  }
+  for (let i = 0; i < arrNumber.length; i++) {
+    if (checkPrimeNum(arrNumber[i])) {
+      return arrNumber[i]
     }
   }
-  return primeNumFirst
+  return -1
 }
 
-// Bài 8
+// Bài 9
 /**
  * It takes an array of numbers and returns the number of integers in the array.
  * @param arrNumber - an array of numbers
