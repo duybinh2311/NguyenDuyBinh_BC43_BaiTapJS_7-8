@@ -105,20 +105,15 @@ function swapIndexElement(arrNumber, selector) {
 
 // Bài 7
 /**
- * It takes an array of numbers and returns a new array of numbers sorted in ascending order.
- * @param arrNumber - [2, 8, 4, 6, 8, 5, 8, 4]
+ * The function takes an array of numbers as an argument, sorts the array in ascending order, and
+ * returns the sorted array.
+ * @param arrNumber - [2, 8, 5, 2, 6]
  * @returns the sorted array.
  */
 function sortAscending(arrNumber) {
-  for (let i = 0; i < arrNumber.length - 1; i++) {
-    for (let j = i + 1; j < arrNumber.length; j++) {
-      if (arrNumber[i] > arrNumber[j]) {
-        let markValue = arrNumber[i]
-        arrNumber[i] = arrNumber[j]
-        arrNumber[j] = markValue
-      }
-    }
-  }
+  arrNumber.sort(function (a, b) {
+    return a - b
+  })
   return arrNumber
 }
 
